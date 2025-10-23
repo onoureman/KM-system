@@ -1,0 +1,240 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --background: linear-gradient(135deg, #061329 0%, #09070F 25%, #370B2C 50%, #120814 75%, #061329 100%);
+  --background-solid: #061329;
+  --foreground: #FFFFFF;
+  --card: rgba(18, 8, 20, 0.8);
+  --card-foreground: #FFFFFF;
+  --popover: rgba(9, 7, 15, 0.95);
+  --popover-foreground: #FFFFFF;
+  --primary: #370B2C;
+  --primary-foreground: #FFFFFF;
+  --secondary: rgba(55, 11, 44, 0.3);
+  --secondary-foreground: #FFFFFF;
+  --muted: rgba(18, 8, 20, 0.6);
+  --muted-foreground: rgba(255, 255, 255, 0.7);
+  --accent: rgba(55, 11, 44, 0.4);
+  --accent-foreground: #FFFFFF;
+  --destructive: #d4183d;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: transparent;
+  --input-background: rgba(18, 8, 20, 0.4);
+  --switch-background: rgba(55, 11, 44, 0.6);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: rgba(55, 11, 44, 0.8);
+  --chart-1: #370B2C;
+  --chart-2: #120814;
+  --chart-3: #061329;
+  --chart-4: #09070F;
+  --chart-5: rgba(55, 11, 44, 0.8);
+  --radius: 0.625rem;
+  --sidebar: rgba(9, 7, 15, 0.9);
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #370B2C;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: rgba(18, 8, 20, 0.6);
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: rgba(55, 11, 44, 0.8);
+}
+
+.dark {
+  --background: linear-gradient(135deg, #061329 0%, #09070F 25%, #370B2C 50%, #120814 75%, #061329 100%);
+  --background-solid: #061329;
+  --foreground: #FFFFFF;
+  --card: rgba(18, 8, 20, 0.8);
+  --card-foreground: #FFFFFF;
+  --popover: rgba(9, 7, 15, 0.95);
+  --popover-foreground: #FFFFFF;
+  --primary: #370B2C;
+  --primary-foreground: #FFFFFF;
+  --secondary: rgba(55, 11, 44, 0.3);
+  --secondary-foreground: #FFFFFF;
+  --muted: rgba(18, 8, 20, 0.6);
+  --muted-foreground: rgba(255, 255, 255, 0.7);
+  --accent: rgba(55, 11, 44, 0.4);
+  --accent-foreground: #FFFFFF;
+  --destructive: #d4183d;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: transparent;
+  --input-background: rgba(18, 8, 20, 0.4);
+  --ring: rgba(55, 11, 44, 0.8);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #370B2C;
+  --chart-2: #120814;
+  --chart-3: #061329;
+  --chart-4: #09070F;
+  --chart-5: rgba(55, 11, 44, 0.8);
+  --sidebar: rgba(9, 7, 15, 0.9);
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #370B2C;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: rgba(18, 8, 20, 0.6);
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: rgba(55, 11, 44, 0.8);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply text-foreground;
+    background: var(--background);
+    min-height: 100vh;
+  }
+
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(18, 8, 20, 0.3);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(55, 11, 44, 0.6);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(55, 11, 44, 0.8);
+  }
+
+  /* Glass morphism utility classes */
+  .glass {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(18, 8, 20, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-light {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(18, 8, 20, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Animated gradient background */
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, #061329, #09070F, #370B2C, #120814, #061329);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
