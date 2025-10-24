@@ -2,83 +2,79 @@
 
 :root {
   --font-size: 14px;
-  --background: linear-gradient(135deg, #061329 0%, #09070F 25%, #370B2C 50%, #120814 75%, #061329 100%);
-  --background-solid: #061329;
-  --foreground: #FFFFFF;
-  --card: rgba(18, 8, 20, 0.8);
-  --card-foreground: #FFFFFF;
-  --popover: rgba(9, 7, 15, 0.95);
-  --popover-foreground: #FFFFFF;
-  --primary: #370B2C;
-  --primary-foreground: #FFFFFF;
-  --secondary: rgba(55, 11, 44, 0.3);
-  --secondary-foreground: #FFFFFF;
-  --muted: rgba(18, 8, 20, 0.6);
-  --muted-foreground: rgba(255, 255, 255, 0.7);
-  --accent: rgba(55, 11, 44, 0.4);
-  --accent-foreground: #FFFFFF;
+  /* lighter pastel gradient for a clear light mode background */
+  --background: linear-gradient(135deg, #ffffff 0%, #f8fbff 25%, #f1f7ff 50%, #fff6fb 75%, #ffffff 100%);
+  --background-solid: #ffffff;
+  /* darker, high-contrast text for readability */
+  --foreground: #0b1220;
+  --card: rgba(255, 255, 255, 0.95);
+  --card-foreground: #0b1220;
+  --popover: rgba(255, 255, 255, 0.98);
+  --popover-foreground: #0b1220;
+  --primary: #370B2C; /* keep brand/dark accent */
+  --primary-foreground: #ffffff;
+  --secondary: rgba(199, 81, 170, 0.06);
+  --secondary-foreground: #0b1220;
+  --muted: rgba(11, 17, 32, 0.04);
+  --muted-foreground: rgba(11, 17, 32, 0.7);
+  --accent: rgba(231, 131, 206, 0.04);
+  --accent-foreground: #0b1220;
   --destructive: #d4183d;
-  --destructive-foreground: #FFFFFF;
-  --border: rgba(255, 255, 255, 0.1);
-  --input: transparent;
-  --input-background: rgba(18, 8, 20, 0.4);
-  --switch-background: rgba(55, 11, 44, 0.6);
+  --destructive-foreground: #ffffff;
+  --border: rgba(11, 17, 32, 0.06);
+  --input: #ffffff;
+  --input-background: rgba(11, 17, 32, 0.04);
+  --switch-background: rgba(109, 24, 88, 0.08);
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: rgba(55, 11, 44, 0.8);
+  --ring: rgba(55, 11, 44, 0.08);
   --chart-1: #370B2C;
   --chart-2: #120814;
   --chart-3: #061329;
   --chart-4: #09070F;
-  --chart-5: rgba(55, 11, 44, 0.8);
+  --chart-5: rgba(55, 11, 44, 0.12);
   --radius: 0.625rem;
-  --sidebar: rgba(9, 7, 15, 0.9);
-  --sidebar-foreground: #FFFFFF;
+  --sidebar: rgba(255, 255, 255, 0.98);
+  --sidebar-foreground: #0b1220;
   --sidebar-primary: #370B2C;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: rgba(18, 8, 20, 0.6);
-  --sidebar-accent-foreground: #FFFFFF;
-  --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: rgba(55, 11, 44, 0.8);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(11, 17, 32, 0.04);
+  --sidebar-accent-foreground: #0b1220;
+  --sidebar-border: rgba(11, 17, 32, 0.06);
+  --sidebar-ring: rgba(55, 11, 44, 0.08);
 }
 
+/* keep .dark present but use same light values so site stays in light mode */
 .dark {
-  --background: linear-gradient(135deg, #061329 0%, #09070F 25%, #370B2C 50%, #120814 75%, #061329 100%);
-  --background-solid: #061329;
-  --foreground: #FFFFFF;
-  --card: rgba(18, 8, 20, 0.8);
-  --card-foreground: #FFFFFF;
-  --popover: rgba(9, 7, 15, 0.95);
-  --popover-foreground: #FFFFFF;
+  --background: linear-gradient(135deg, #ffffff 0%, #f8fbff 25%, #f1f7ff 50%, #fff6fb 75%, #ffffff 100%);
+  --background-solid: #ffffff;
+  --foreground: #0b1220;
+  --card: rgba(255,255,255,0.95);
+  --card-foreground: #0b1220;
+  --popover: rgba(255,255,255,0.98);
+  --popover-foreground: #0b1220;
   --primary: #370B2C;
-  --primary-foreground: #FFFFFF;
-  --secondary: rgba(55, 11, 44, 0.3);
-  --secondary-foreground: #FFFFFF;
-  --muted: rgba(18, 8, 20, 0.6);
-  --muted-foreground: rgba(255, 255, 255, 0.7);
-  --accent: rgba(55, 11, 44, 0.4);
-  --accent-foreground: #FFFFFF;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(199, 81, 170, 0.06);
+  --secondary-foreground: #0b1220;
+  --muted: rgba(11, 17, 32, 0.04);
+  --muted-foreground: rgba(11, 17, 32, 0.7);
+  --accent: rgba(231, 131, 206, 0.04);
+  --accent-foreground: #0b1220;
   --destructive: #d4183d;
-  --destructive-foreground: #FFFFFF;
-  --border: rgba(255, 255, 255, 0.1);
-  --input: transparent;
-  --input-background: rgba(18, 8, 20, 0.4);
-  --ring: rgba(55, 11, 44, 0.8);
-  --font-weight-medium: 500;
-  --font-weight-normal: 400;
-  --chart-1: #370B2C;
-  --chart-2: #120814;
-  --chart-3: #061329;
-  --chart-4: #09070F;
-  --chart-5: rgba(55, 11, 44, 0.8);
-  --sidebar: rgba(9, 7, 15, 0.9);
-  --sidebar-foreground: #FFFFFF;
+  --destructive-foreground: #ffffff;
+  --border: rgba(11, 17, 32, 0.06);
+  --input: #ffffff;
+  --input-background: rgba(11, 17, 32, 0.04);
+  --ring: rgba(55, 11, 44, 0.08);
+  --sidebar: rgba(255, 255, 255, 0.98);
+  --sidebar-foreground: #0b1220;
   --sidebar-primary: #370B2C;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: rgba(18, 8, 20, 0.6);
-  --sidebar-accent-foreground: #FFFFFF;
-  --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: rgba(55, 11, 44, 0.8);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(11, 17, 32, 0.04);
+  --sidebar-accent-foreground: #0b1220;
+  --sidebar-border: rgba(11, 17, 32, 0.06);
+  --sidebar-ring: rgba(55, 11, 44, 0.08);
 }
 
 @theme inline {
@@ -129,23 +125,23 @@
 
   body {
     @apply text-foreground;
-    background: var(--background-solid); /* fallback under the filtered layer */
+    background: var(--background-solid);
     position: relative;
     min-height: 100vh;
+    color: var(--foreground);
   }
 
-  /* Lightened background layer using the same color variables */
+  /* light, subtle overlay to guarantee readable contrast with darker text */
   body::before {
     content: "";
     position: fixed;
     inset: 0;
     z-index: -1;
-    background: var(--background);
-    background-size: 400% 400%;
-    /* Increase brightness to make the background lighter for better contrast.
-       Adjust the 1.15 value up/down to tweak lightness. */
-    filter: brightness(1.15) saturate(1.02);
-    -webkit-filter: brightness(1.15) saturate(1.02);
+    background-image:
+      linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.48)),
+      var(--background);
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
     pointer-events: none;
   }
 
@@ -155,34 +151,28 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: rgba(18, 8, 20, 0.3);
+    background: rgba(127, 83, 135, 0.06);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(55, 11, 44, 0.6);
+    background: rgba(186, 95, 164, 0.22);
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(55, 11, 44, 0.8);
+    background: rgba(152, 50, 126, 0.34);
   }
 
-  /* Glass morphism utility classes */
+  /* Glass morphism utility classes now use theme variables so they adapt to light/dark */
   .glass {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: rgba(18, 8, 20, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .glass-light {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    background: rgba(18, 8, 20, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--card-foreground);
   }
 
-  /* Animated gradient background */
+  /* Animated gradient background (uses light theme variable now) */
   @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -190,9 +180,9 @@
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, #061329, #09070F, #370B2C, #120814, #061329);
+    background: var(--background);
     background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
+    animation: gradientShift 30s ease infinite;
   }
 }
 
