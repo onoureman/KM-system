@@ -129,8 +129,24 @@
 
   body {
     @apply text-foreground;
-    background: var(--background);
+    background: var(--background-solid); /* fallback under the filtered layer */
+    position: relative;
     min-height: 100vh;
+  }
+
+  /* Lightened background layer using the same color variables */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: var(--background);
+    background-size: 400% 400%;
+    /* Increase brightness to make the background lighter for better contrast.
+       Adjust the 1.15 value up/down to tweak lightness. */
+    filter: brightness(1.15) saturate(1.02);
+    -webkit-filter: brightness(1.15) saturate(1.02);
+    pointer-events: none;
   }
 
   /* Custom scrollbar styling */
